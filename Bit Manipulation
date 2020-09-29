@@ -1,4 +1,31 @@
-⦿1)Hackerrank Problem
+1)Lonely Integer
+https://www.hackerrank.com/challenges/lonely-integer/problem
+soln-
+Logic --> 1^2^3^1^2==1^1^2^2^3
+a^b^c==c^a^b==b^c^a
+changing order of values doesn't change xor value
+ques given -- all values have exactly 2 values are same except one--
+& wkt -- a^a==0 & a^0=a;
+example 0 0 1 2 1 --
+0^0^1^2^1==0^0^1^1^2
+==========>0^0^2
+==========>0^2
+===========>2
+2 is a unique number--
+int main()
+{
+    int n,ans=0,i;
+    cin>>n;
+    int a[n];
+    for(i=0;i<n;i++)
+    cin>>a[i];
+    for(i=0;i<n;i++)
+     ans=ans^a[i];
+   cout<<ans;
+
+return 0;
+}
+⦿2)SUM VS XOR
 https://www.hackerrank.com/challenges/sum-vs-xor/problem
 Soln-
 ⦿Logic-
