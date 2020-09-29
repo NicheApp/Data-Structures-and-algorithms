@@ -1,0 +1,31 @@
+⦿1)Hackerrank Problem
+https://www.hackerrank.com/challenges/sum-vs-xor/problem
+Soln-
+⦿Logic-
+xor and Or will be different only when both bits are set (1,1) in rest of the cases xor && OR will be same
+1|0=1^0
+0|1=0^1
+0|0=0^0
+Here we can see if a number contains 1 at some index then 2nd number must contain 1 at same index (so we can say for 1 there is one option)
+but, if number contains 0 at some index then second number can contain either 0 or 1 (so there are 2 options for 0)
+
+so we will calculate no. of 0 bits in a number then  ans= pow(2,no.of 0's)
+
+⦿Code-
+long long  sumXor(long long n) {
+   long long count = 0;  
+   while(n>0)
+   {
+if(!(n&1))count++;
+n=n>>1; }
+   return count;
+}
+int main()
+{
+    long long  n;
+    cin>>n;
+    cout<<fixed;
+   printf("%0.f",pow(2,sumXor(n)));
+
+    return 0;
+}
