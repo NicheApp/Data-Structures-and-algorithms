@@ -1,3 +1,16 @@
+Bitset function Stl--
+bitset<32> bs(n); cout<<bs; // if n=1 than ans= 00000000000000000000000000000001 //convert decimal to binary
+bs.set()//set all bits to 1 && bs.set(2)//set second index bit to 1
+bs.reset()//set all bits to 0 && bs.reset(2)//make 2 index bit to 0 
+bs.flip()//flip all bits && bs.flip(2)//make 2 index bit to flip
+bs.count()//count set bits
+bs.size()// total bits
+bs.size()-bs.count()// total reset(0) bits
+bs.any()// any function returns true, if atleast 1 bit is set 
+bs.none()//none function returns true, if none of the bit is set 
+
+bs.to_ulong() //convert binary to decimal 0000000000000000000000000000100 = 4
+
 1)Lonely Integer
 https://www.hackerrank.com/challenges/lonely-integer/problem
 soln-
