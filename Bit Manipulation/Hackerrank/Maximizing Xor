@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+// Complete the maximizingXor function below.
+int maximizingXor(int l, int r) {
+
+    int i,j,mx=0,k;
+for(i=l;i<=r;i++)
+{
+for(j=i;j<=r;j++)
+{
+k=i^j;
+if(k>mx)
+mx=k;
+}
+}
+return mx;
+}int main()
+{
+   int l,r;
+   cin>>l>>r;
+
+cout<<maximizingXor(l, r);
+  return 0;
+}
