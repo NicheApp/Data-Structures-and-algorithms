@@ -1,0 +1,72 @@
+
+Bitset function Stl--
+bitset<32> bs(n); cout<<bs; // if n=1 than ans= 00000000000000000000000000000001 //convert decimal to binary
+bs.set()//set all bits to 1 && bs.set(2)//set second index bit to 1
+bs.reset()//set all bits to 0 && bs.reset(2)//make 2 index bit to 0 
+bs.flip()//flip all bits && bs.flip(2)//make 2 index bit to flip
+bs.count()//count set bits
+bs.size()// total bits
+bs.size()-bs.count()// total reset(0) bits
+bs.any()// any function returns true, if atleast 1 bit is set 
+bs.none()//none function returns true, if none of the bit is set 
+
+bs.to_ulong() //convert binary to decimal 0000000000000000000000000000100 = 4
+
+1)Lonely Integer
+https://www.hackerrank.com/challenges/lonely-integer/problem
+soln-
+Logic --> 1^2^3^1^2==1^1^2^2^3
+a^b^c==c^a^b==b^c^a
+changing order of values doesn't change xor value
+ques given -- all values have exactly 2 values are same except one--
+& wkt -- a^a==0 & a^0=a;
+example 0 0 1 2 1 --
+0^0^1^2^1==0^0^1^1^2
+==========>0^0^2
+==========>0^2
+===========>2
+2 is a unique number--
+int main()
+{
+    int n,ans=0,i;
+    cin>>n;
+    int a[n];
+    for(i=0;i<n;i++)
+    cin>>a[i];
+    for(i=0;i<n;i++)
+     ans=ans^a[i];
+   cout<<ans;
+
+return 0;
+}
+⦿2)SUM VS XOR
+https://www.hackerrank.com/challenges/sum-vs-xor/problem
+Soln-
+⦿Logic-
+xor and Or will be different only when both bits are set (1,1) in rest of the cases xor && OR will be same
+1|0=1^0
+0|1=0^1
+0|0=0^0
+Here we can see if a number contains 1 at some index then 2nd number must contain 1 at same index (so we can say for 1 there is one option)
+but, if number contains 0 at some index then second number can contain either 0 or 1 (so there are 2 options for 0)
+
+so we will calculate no. of 0 bits in a number then  ans= pow(2,no.of 0's)
+
+⦿Code-
+long long  sumXor(long long n) {
+   long long count = 0;  
+   while(n>0)
+   {
+if(!(n&1))count++;
+n=n>>1; }
+   return count;
+}
+int main()
+{
+    long long  n;
+    cin>>n;
+    cout<<fixed;
+   printf("%0.f",pow(2,sumXor(n)));
+
+    return 0;
+}
