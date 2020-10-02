@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+int t;
+cin>>t;
+while(t--)
+{
+long long a,b,sum=0,d,f=1;
+cin>>a>>b;
+ d=b-a;
+for(int i=0;i<32;i++)
+{
+if(d>(f<<i))continue;
+else{
+
+    if((a&(f<<i)) && (b&(f<<i)))
+    sum+=f<<i;
+}
+
+}
+cout<<sum<<endl;
+
+}
+return 0;
+}
