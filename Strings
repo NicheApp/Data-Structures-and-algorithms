@@ -1,1 +1,27 @@
 
+STRING FUNCTIONS 
+-----------------------------------------------------------------------------------------------------
+1)String pattern searching function
+
+string txt = "aaaa", pat = "aa"; 
+ int found = txt.find(pat); //here found is an index
+if (found!=std::string::npos)
+    std::cout << "first 'needle' found at: " << found << '\n';
+   ------------------------------------------------------------------------------------------------ 
+2)Substring 
+
+ s.substr(index,index+length());
+ 
+  string s1 = "Geeks"; 
+  string r = s1.substr(1, 3); 
+  cout << "String is: " << r; 
+  
+  ans=eek
+ ------------------------------------------------------------------------------------------------------------------ 
+ 3)sort a string;
+
+string s='cba';
+sort(s.begin(),s.end());
+
+ans=abc
+---------------------------------------------------------------------------------------------------------------------
