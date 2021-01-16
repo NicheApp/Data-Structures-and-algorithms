@@ -1,4 +1,11 @@
 
+Count no. of binary digits in binary representation of a decimal number-
+formula = 1+ log2(num);
+ex - num = 2 : ans=2
+     num = 16 : ans=5
+     num =3 : ans= 2
+      
+ 
 Bitset function Stl--
 bitset<32> bs(n); cout<<bs; // if n=1 than ans= 00000000000000000000000000000001 //convert decimal to binary
 bs.set()//set all bits to 1 && bs.set(2)//set second index bit to 1
