@@ -1,0 +1,66 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+void addnode(vector<int> graph[],int u, int v)
+{
+graph[u].push_back(v);
+}
+void dfs(vector<int> graph[], vector<bool> &visited,stack<int> &st,stack<int> &toposort)
+{
+
+if(!st.empty())
+{
+
+int s=st.top();
+
+for(auto it: graph[s])
+{
+if(!visited[it])
+{
+visited[it]=true;
+st.push(it);
+dfs(graph,visited,st,toposort);
+
+}
+
+}
+//cout<<st.top()<<"->";
+toposort.push(st.top());
+st.pop();
+}
+
+}
+
+int main()
+{
+std::ios::sync_with_stdio(false);
+cin.tie(NULL);
+int V,e,e1,e2;
+cin>>V;
+vector<int> graph[V];
+cin>>e;
+for(int i=0;i<e;i++)
+{
+cin>>e1>>e2;
+addnode(graph,e1,e2);
+}
+vector<bool> visited(V,false);
+stack<int> toposort ;
+for(int i=0;i<V;i++){
+
+if(!visited[i]){
+stack<int> st;
+st.push(i);
+visited[i]=true;
+dfs(graph,visited,st,toposort);
+}
+}
+
+while(!toposort.empty())
+{
+    cout<<toposort.top()<<" ";
+    toposort.pop();
+}
+return 0;
+}
