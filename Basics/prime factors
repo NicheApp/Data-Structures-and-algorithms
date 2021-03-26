@@ -1,6 +1,6 @@
 ==============================================================================================================
 @factors
- we calculate factors by using i and n/i=>=> Below is the cpp code for calculating factors
+ we calculate factors by using i and n/i=>=> Below is the cpp code for calculating prime factors
 -----------------------------------------------
 #include<bits/stdc++.h>
 using namespace std;
