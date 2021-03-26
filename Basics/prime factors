@@ -22,7 +22,7 @@ cout<<it<<" ";
 Output - 2 3 4 6 
 -------------------------------------------
 ===============================================================================
-@Prime factors- Prime factors are factors of a number that are, themselves, prime numbers. =>=> Below is the cpp code for calculating factors
+@Prime factors- Prime factors are factors of a number that are, themselves, prime numbers. =>=> Below is the cpp code for calculating prime factors
 
 #include<bits/stdc++.h>
 using namespace std;
